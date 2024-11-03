@@ -9,3 +9,7 @@
 # step 6
 
     https://asciinema.org/a/3jgTf9qSfNz4UiX1HnP1R1tQi
+
+# step 7
+
+    https://asciinema.org/a/RAHq6mLSkpatTpjITY8rW5XAZ

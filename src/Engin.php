@@ -58,6 +58,36 @@ function checkCalc(string $name)
 
 }
 
+function checkNod(string $name)
+{
+    $numb1 = random_int(1, 100);
+    $numb2 = random_int(1, 100);
+
+    if($numb1 >= $numb2) {
+        $min = $numb2;
+        $max = $numb1;
+    } else {
+        $min = $numb1;
+        $max = $numb2;
+    }
+    while($max % $min !== 0) {
+            $ost = $max % $min;
+            $max = $min;
+            $min = $ost;
+        } 
+    
+    cli\line("Find the greatest common divisor of given numbers.");
+    cli\line('Question: ' . $numb1 . " " . $numb2);
+    $ans = cli\prompt('Your answer ');
+    if ($ans == $min) {
+        cli\line('Correct!');
+    } else {
+        cli\line("'" . $ans . "' is wrong answer ;(. Correct answer was '" . $min . "'.\nLet's try again, " . $name . "!");
+        return 1;
+    }
+
+}
+
 function getEngin(string $stepName)
 {
     cli\line('Welcome to the Brain Games!');
@@ -79,6 +109,12 @@ function getEngin(string $stepName)
                     return 0;
                 }
                 break;
+            case "nod":
+                $err = checkNod($name);
+                if ($err === 1) {
+                    return 0;
+                }
+                break;    
         }
     }
     cli\line("Congratulations, " . $name . "!");
