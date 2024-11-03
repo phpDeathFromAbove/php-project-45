@@ -60,7 +60,7 @@ function checkCalc(string $name)
 
 function getEngin(string $stepName)
 {
-    cli\line('Welcome to the Brain Game!');
+    cli\line('Welcome to the Brain Games!');
     $name = cli\prompt('May I have your name?');
     cli\line("Hello, %s!", $name);
 
