@@ -9,7 +9,7 @@ use cli\prompt;
 function checkEven(string $name)
 {
     $numb = random_int(1, 40);
-    cli\line('Answer "yes" if the number is even, otherwise answer "no".');
+
     cli\line('Question: ' . $numb);
     $ans = cli\prompt('Your answer ');
     if (($numb % 2 === 0 && $ans === "yes")||($numb % 2 !== 0 && $ans === "no"))
@@ -28,7 +28,7 @@ function checkCalc(string $name)
     $numb1 = random_int(1, 40);
     $numb2 = random_int(1, 40);
     $oper = $masOp[random_int(0, 2)];
-    cli\line('What is the result of the expression?');
+
     cli\line('Question: ' . $numb1 . " " . $oper . " " .$numb2);
     $ans = cli\prompt('Your answer ');
     switch ($oper) {
@@ -76,7 +76,7 @@ function checkNod(string $name)
             $min = $ost;
         } 
     
-    cli\line("Find the greatest common divisor of given numbers.");
+
     cli\line('Question: ' . $numb1 . " " . $numb2);
     $ans = cli\prompt('Your answer ');
     if ($ans == $min) {
@@ -98,18 +98,21 @@ function getEngin(string $stepName)
     {   
         switch ($stepName) {
             case "even":
+                cli\line('Answer "yes" if the number is even, otherwise answer "no".');
                 $err = checkEven($name);
                 if ($err === 1) {
                     return 0;
                 }
                 break;
             case "calc":
+                cli\line('What is the result of the expression?');
                 $err = checkCalc($name);
                 if ($err === 1) {
                     return 0;
                 }
                 break;
             case "nod":
+                cli\line("Find the greatest common divisor of given numbers.");
                 $err = checkNod($name);
                 if ($err === 1) {
                     return 0;
