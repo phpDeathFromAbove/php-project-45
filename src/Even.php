@@ -28,5 +28,6 @@ function checkEven()
         }
     }
     cli\line("Congratulations, " . $name . "!");
+    return 0;
 }
 
