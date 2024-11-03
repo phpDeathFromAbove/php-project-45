@@ -6,6 +6,6 @@ require_once __DIR__ . '../../vendor/autoload.php';
 
 use PhpProject\Engin;
 
-getEngin('even');
+getEngin('calc');
 
 ?>

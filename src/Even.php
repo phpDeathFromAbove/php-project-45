@@ -8,7 +8,7 @@ use cli\prompt;
 
 
 
-function checkEven()
+function checkEven1()
 {
     cli\line('Welcome to the Brain Game!');
     $name = cli\prompt('May I have your name?');
